@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { createLogger } from 'redux-logger';
 import { createBrowserHistory } from 'history';
 import rootReducer from '@/services/reducers';
+import thunk from 'redux-thunk';
 
 export const history = createBrowserHistory();
 
@@ -12,6 +13,7 @@ const middlewares = [];
 if (process.env.NODE_ENV === 'development') {
   const logger = createLogger();
   middlewares.push(logger);
+  middlewares.push(thunk);
 }
 
 const enhancers = composeEnhancers(

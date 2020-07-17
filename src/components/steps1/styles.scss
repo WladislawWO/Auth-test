@@ -1,0 +1,30 @@
+.step {
+  margin-top: 30px;
+  .form{
+    display: flex;
+    flex-direction: column;
+    .label {
+      margin-bottom: 10px;
+    }
+    .error{
+      color: red;
+    }
+    .email, .password, .confirmpsw {
+      margin-bottom: 40px;
+      border: none;
+      font-size: 20px;
+      border-bottom: 1px solid #cccccc;
+      height: 50px;
+    }
+    .button {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        color: rgba(0, 0, 255, 0.658);
+        background-color: white;
+      }
+    }
+  }
+}

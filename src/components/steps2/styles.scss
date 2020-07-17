@@ -1,0 +1,91 @@
+.step {
+  margin-top: 30px;
+  .form{
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-bottom: 10px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .dateContainer {
+      display: flex;
+      width: 100%;
+      margin-bottom: 30px;
+      .date{
+        display: flex;
+        width: 145px;
+        height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        border: 1px solid #eeeeee;
+        &-active{
+          background-color: rgba(0, 0, 255, 0.658);
+        }
+      }
+    }
+    .sexContainer {
+      display: flex;
+      width: 100%;
+      margin-bottom: 30px;
+      .radio {
+        display: inline-block;
+      }
+      .radio input[type=radio] {
+        display: none;
+      }
+      .radio label {
+        display: flex;
+        justify-content: center;
+        width: 145px;
+        cursor: pointer;
+        padding: 15px 15px;
+        line-height: 34px;
+        border: 1px solid #999;
+        border-radius: 6px;
+        text-transform: uppercase;
+      }
+
+      /* Checked */
+      .radio input[type=radio]:checked + label {
+        background-color: rgba(53, 53, 231, 0.658);
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Hover */
+      .radio label:hover {
+        color: #666;
+        background-color: rgba(53, 53, 231, 0.233);
+      }
+
+      /* Disabled */
+      .radio input[type=radio]:disabled + label {
+        background: #efefef;
+        color: #666;
+      }
+    }
+    .select{
+      height: 40px;
+    }
+    .button {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      .back{
+        color: #c7c3c3;
+      }
+      button {
+        color: rgba(0, 0, 255, 0.658);
+        background-color: white;
+      }
+    }
+    .error {
+      color: red
+    }
+    .dateError{
+      border: 1px solid red!important;
+    }
+  }
+}

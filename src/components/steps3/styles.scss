@@ -1,0 +1,23 @@
+.step {
+  margin-top: 30px;
+  .goTo{
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: 1px solid rgba(42, 42, 179, 0.61);
+    padding: 10px;
+    margin: 0 auto 50px auto;
+  }
+  .check {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    svg {
+      height: 300px;
+      color: rgba(95, 255, 47, 0.658);
+    }
+  }
+}

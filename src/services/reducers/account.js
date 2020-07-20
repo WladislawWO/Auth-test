@@ -1,4 +1,4 @@
-import { ADD_USER_DATA, SET_STEP } from '@/services/actions/accounts';
+import { setUserData, setStep } from '@/services/actions/accounts';
 
 const initState = {
   currentUser: {
@@ -13,12 +13,13 @@ const initState = {
 
 export default (state = initState, { type, payload }) => {
   switch (type) {
-    case ADD_USER_DATA:
+    case setUserData.toString():
       return {
         ...state,
         currentUser: { ...state.currentUser, ...payload },
+        step: state.step + 1,
       };
-    case SET_STEP:
+    case setStep.toString():
       return {
         ...state,
         step: payload,

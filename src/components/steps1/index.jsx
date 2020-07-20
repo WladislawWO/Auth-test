@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, Form, Formik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { setUserData } from '@/services/actions/accounts';
+import { setUserData, setData } from '@/services/actions/accounts';
 import { createSelector } from 'reselect';
 import { userDataSelector } from '../../utils/selectors';
 import { validateEmail, validatePassword, isPasswordEqual } from '../../utils/validation';
@@ -26,6 +26,7 @@ const Step1 = () => {
          confirmpsw: user.password,
        }}
        onSubmit={(values) => {
+         delete values.confirmpsw;
          dispatch(setUserData(values));
        }}
      >

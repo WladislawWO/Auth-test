@@ -1,5 +1,5 @@
 .step {
-  margin-top: 30px;
+  margin-top: 50px;
   .form{
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
     .dateContainer {
       display: flex;
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       .date{
         display: flex;
         width: 145px;
@@ -27,7 +27,7 @@
     .sexContainer {
       display: flex;
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       .radio {
         display: inline-block;
       }
@@ -46,20 +46,17 @@
         text-transform: uppercase;
       }
 
-      /* Checked */
       .radio input[type=radio]:checked + label {
         background-color: rgba(53, 53, 231, 0.658);
         color: white;
         font-weight: bold;
       }
 
-      /* Hover */
       .radio label:hover {
         color: #666;
         background-color: rgba(53, 53, 231, 0.233);
       }
 
-      /* Disabled */
       .radio input[type=radio]:disabled + label {
         background: #efefef;
         color: #666;
@@ -69,7 +66,7 @@
       height: 40px;
     }
     .button {
-      margin-top: 30px;
+      margin-top: 60px;
       margin-bottom: 40px;
       display: flex;
       justify-content: space-between;

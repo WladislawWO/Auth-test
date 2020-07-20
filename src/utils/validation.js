@@ -1,7 +1,7 @@
 export const validateEmail = (value) => {
   let error;
   if (!value) {
-    error = 'Required';
+    error = 'Email is required';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
     error = 'Invalid email address';
   }
@@ -11,7 +11,7 @@ export const validateEmail = (value) => {
 export const validatePassword = (value) => {
   let error;
   if (!value) {
-    error = 'Required';
+    error = 'Password is required';
   } else if (value.length < 6) {
     error = 'Password can not be less 6 characters';
   }
@@ -21,7 +21,7 @@ export const validatePassword = (value) => {
 export const isPasswordEqual = (password, values) => {
   let error;
   if (!password) {
-    error = 'Required';
+    error = 'Confirm Password is required';
   } else if (password !== values.password) {
     error = 'Password mismatch';
   }
@@ -31,9 +31,9 @@ export const isPasswordEqual = (password, values) => {
 export const valideteDate = (value) => {
   let error;
   if (!value) {
-    error = 'Required';
+    error = 'Date is required';
   } else if (value.length < 2) {
-    error = 'Incorrect format';
+    error = 'Incorrect date format';
   }
   return error;
 };
@@ -41,9 +41,9 @@ export const valideteDate = (value) => {
 export const valideteYear = (value) => {
   let error;
   if (!value) {
-    error = 'Required';
+    error = 'Year is required';
   } else if (value.length < 4) {
-    error = 'Incorrect format';
+    error = 'Incorrect date format';
   }
   return error;
 };
